@@ -1,0 +1,85 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpha Critix</title>
+    <link rel="stylesheet" href="css/foundation.css">
+    <link href="http://fonts.googleapis.com/css?family=Cabin+Sketch" rel="stylesheet" type="text/css">
+    <link href="css/audioPlayerStyles.css" rel="stylesheet"  type="text/css">
+    <script src="script/TweenMax.min.js"></script>
+    <script src="script/modernizr_custom.js"></script>
+
+  </head>
+
+  <body>
+  <h1 class="hide">Alpha Critix</h1>
+
+
+
+<div id="wrapper">
+	<h1>Welcome to Alpha Critix : Movie Reviews</h1>
+
+	<!-- these are draggabel buttons -->
+	<div id="buttonHolder">
+		<img src="images/button1.png" id="Action"  draggable="true" alt="soundtrack button">
+		<img src="images/button2.png" id="Drama" draggable="true" alt="alternative button">
+		<img src="images/button3.png" id="Family" draggable="true" alt="oldies button">
+		<p>Drag to the blue button</p>
+	</div>
+
+	<!-- this is the drop target -> drag a button here -->
+	<div class="tracks" id="tracks">
+		<img src="images/targetImg.png" id="theTarget" alt="drag here">
+		<img src="images/newBarBG.jpg" id="playerBar" alt="playerBar">
+	    <p id="genreTitle">&laquo; Drag buttons to see the movies!</p>
+	</div>
+
+	<!-- tracks get populated here -->
+	<ul class="trackHolder"></ul>
+
+	<video id="myAudioPlayer">
+	<source src="videos/Avengers.mp4" type="video/mp4">
+	</video>
+
+
+	<!-- the audio controls (I'd probably do this differently / update these with icons from font-awsome) -->
+	<div id="controlBar">
+		<div id="playButton"></div>
+	    <div id="shuffle"></div>
+	    <div id="muteButton"></div>
+	    <input id="volumeSlider" type="range" max="100" value="100">
+	    <p id="trackTime"></p>
+	    <progress id="prog" max="100"></progress>
+	</div>
+</div>
+<div id="commentSection">
+  <article id="mainArticle">
+    <article>
+      <h2 id="addReview">Add Reviews Here</h2>
+      <p id="subtext">Type and enter!</p>
+    </article>
+        <div id="container">
+            <ul id="list" contenteditable>
+              <li>Edit List Item</li>
+            </ul>
+
+          	<button id="saveAll">Save All</button> |
+          	<button id="clearAll">Clear All</button>
+
+        </div>
+  </article>
+</div>
+
+
+
+
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="script/mediaPlayer.js"></script>
+  </body>
+</html>
